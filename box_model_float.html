@@ -1,0 +1,85 @@
+<!--Design a web page using Box Model and Floats -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Model and Float Example</title>
+    <style>
+        /* Box Model demonstration */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px; /* padding inside the box */
+            text-align: center;
+            border: 2px solid #333; /* border */
+            margin-bottom: 10px; /* margin outside the box */
+        }
+
+        /* Sidebar float */
+        .sidebar {
+            float: left; /* float left */
+            width: 25%;
+            background-color: #f1f1f1;
+            padding: 15px;
+            border: 2px solid #ccc;
+            box-sizing: border-box; /* include padding & border in width */
+        }
+
+        /* Main content float */
+        .main {
+            float: left; /* float left */
+            width: 70%;
+            background-color: #ddd;
+            padding: 15px;
+            border: 2px solid #999;
+            box-sizing: border-box;
+            margin-left: 5%; /* spacing between sidebar and main */
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-top: 2px solid #4CAF50;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Box Model and Float Example</h1>
+    </header>
+
+    <div class="clearfix">
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            <p>This is the sidebar. It floats to the left of the main content.</p>
+        </div>
+
+        <div class="main">
+            <h2>Main Content</h2>
+            <p>This is the main content area. It also floats next to the sidebar.</p>
+            <p>Notice how padding, margin, border, and width are applied to the boxes.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Footer Section</p>
+    </footer>
+
+</body>
+</html>

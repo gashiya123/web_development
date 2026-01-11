@@ -1,0 +1,51 @@
+<!--design a web page using html [input tag- text, number, checkbox, radio, 
+submit] -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Input Form</title>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+
+    <!-- Form starts here -->
+    <form action="#" method="post">
+        <!-- Text input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <!-- Number input -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="100" required>
+        <br><br>
+
+        <!-- Checkbox input -->
+        <label>Hobbies:</label>
+        <input type="checkbox" id="hobby1" name="hobbies" value="Reading">
+        <label for="hobby1">Reading</label>
+
+        <input type="checkbox" id="hobby2" name="hobbies" value="Sports">
+        <label for="hobby2">Sports</label>
+
+        <input type="checkbox" id="hobby3" name="hobbies" value="Music">
+        <label for="hobby3">Music</label>
+        <br><br>
+
+        <!-- Radio buttons -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+        <br><br>
+
+        <!-- Submit button -->
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

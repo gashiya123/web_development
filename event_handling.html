@@ -1,0 +1,91 @@
+<!--Design interactive pages using Event Handling in javascript -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Page with Event Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        button, input, select {
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        #message {
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid #4CAF50;
+            background-color: #e6ffe6;
+            width: fit-content;
+        }
+
+        #hoverBox {
+            width: 200px;
+            height: 100px;
+            background-color: #ddd;
+            margin-top: 20px;
+            line-height: 100px;
+            text-align: center;
+            border: 2px solid #999;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive Page with JavaScript Event Handling</h1>
+
+    <!-- Click event -->
+    <button onclick="showClickMessage()">Click Me!</button>
+
+    <!-- Mouseover and Mouseout events -->
+    <div id="hoverBox" onmouseover="hoverMessage()" onmouseout="resetHoverMessage()">
+        Hover over me
+    </div>
+
+    <!-- Input change event -->
+    <label for="colorSelect">Choose a color:</label>
+    <select id="colorSelect" onchange="changeColor()">
+        <option value="">--Select Color--</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <!-- Output div -->
+    <div id="message"></div>
+
+    <!-- JavaScript functions -->
+    <script>
+        // Click event function
+        function showClickMessage() {
+            document.getElementById("message").innerHTML = "You clicked the button!";
+        }
+
+        // Mouseover event function
+        function hoverMessage() {
+            document.getElementById("hoverBox").style.backgroundColor = "#4CAF50";
+            document.getElementById("hoverBox").innerHTML = "Mouse is here!";
+        }
+
+        // Mouseout event function
+        function resetHoverMessage() {
+            document.getElementById("hoverBox").style.backgroundColor = "#ddd";
+            document.getElementById("hoverBox").innerHTML = "Hover over me";
+        }
+
+        // Select change event function
+        function changeColor() {
+            var color = document.getElementById("colorSelect").value;
+            if(color) {
+                document.getElementById("message").innerHTML = "You selected: " + color;
+            } else {
+                document.getElementById("message").innerHTML = "";
+            }
+        }
+    </script>
+
+</body>
+</html>

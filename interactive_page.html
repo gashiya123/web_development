@@ -1,0 +1,69 @@
+<!-- Design interactive pages using function in javascript also givr the file name to be saved-->
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Page with JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid #4CAF50;
+            background-color: #e6ffe6;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive Greeting Page</h1>
+
+    <!-- Input fields -->
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" placeholder="Your Name"><br>
+
+    <label for="age">Enter your age:</label>
+    <input type="number" id="age" placeholder="Your Age"><br>
+
+    <!-- Button to trigger JS function -->
+    <button onclick="showMessage()">Submit</button>
+
+    <!-- Output will appear here -->
+    <div id="output"></div>
+
+    <!-- JavaScript function -->
+    <script>
+        function showMessage() {
+            // Get values from input fields
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+
+            // Validate inputs
+            if(name === "" || age === "") {
+                alert("Please enter both name and age!");
+                return;
+            }
+
+            // Create a message
+            var message = "Hello " + name + "! You are " + age + " years old.";
+
+            // Display message in the output div
+            document.getElementById("output").innerHTML = message;
+
+            // Optional: clear inputs
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!--Design a web page using Grid and CSS--><!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Example</title>
+    <style>
+        /* Apply some basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Grid container */
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav main sidebar"
+                "footer footer footer";
+            grid-template-columns: 20% 55% 25%;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #f1f1f1;
+            padding: 15px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #ddd;
+            padding: 15px;
+        }
+
+        main {
+            grid-area: main;
+            background-color: #eee;
+            padding: 15px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Optional styling for links */
+        nav a {
+            display: block;
+            text-decoration: none;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <header>
+            <h1>CSS Grid Layout</h1>
+        </header>
+
+        <nav>
+            <h3>Navigation</h3>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <main>
+            <h2>Main Content</h2>
+            <p>This is the main content area. CSS Grid makes it easy to create complex layouts with minimal code.</p>
+        </main>
+
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            <p>This is a sidebar section. You can put links, ads, or other information here.</p>
+        </div>
+
+        <footer>
+            <p>Footer Section</p>
+        </footer>
+    </div>
+
+</body>
+</html>
